@@ -1,0 +1,151 @@
+/* App Themes */
+.app {
+    min-height: 100vh;
+    transition: 0.3s;
+}
+
+.top-btns {
+  display: flex;
+  gap: 12px;
+}
+
+/* Wrapper */
+.top-two-btns {
+  border-radius: 6px;
+  border: 1px solid lightgray;
+  overflow: hidden; /* 🔥 important for clean edges */
+}
+
+/* SAME style for button & select */
+.top-two-btns button,
+.top-two-btns select {
+  padding: 6px 10px;
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Hover effect */
+.top-two-btns button:hover,
+.top-two-btns select:hover {
+  background: #f1f5f9;
+}
+
+/* Dark mode support */
+.dark .top-two-btns {
+  border: 1px solid #334155;
+}
+
+.dark .top-two-btns button,
+.dark .top-two-btns select {
+  color: #fff;
+}
+
+.dark .top-two-btns button:hover,
+.dark .top-two-btns select:hover {
+  background: #334155;
+}
+.light {
+    background: #f1f5f9;
+    color: #000;
+    minHeight: "100vh",
+}
+
+.dark {
+    background: #0f172a;
+    color: #fff;
+    minHeight: "100vh",
+
+}
+
+.main {
+    flex: 1;
+    padding: 20px;
+    background: "#f1f5f9",
+}
+
+/* Top Bar */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-weight: 600;
+}
+
+
+/* Cards */
+.card-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+/* Charts */
+.chart-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    marginBottom: "20px",
+
+}
+
+.chart-box {
+    flex: 1 1 300px;
+    padding: 10px;
+    border-radius: 10px;
+    background: white;
+}
+
+/* Dark mode chart box */
+.dark .chart-box {
+    background: #1e293b;
+}
+
+/* Insights */
+.insights {
+    padding: 10px;
+    border-radius: 10px;
+    background: white;
+}
+
+.dark .insights {
+    background: #1e293b;
+    color: #e2e8f0;
+}
+.layout{
+    display: flex;
+}
+
+/* ------------------ RESPONSIVE ------------------ */
+
+@media (max-width: 768px) {
+
+    .dark .main .title{
+        color: white;
+    }
+    
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .chart-row {
+        flex-direction: column;
+    }
+
+    .card-row {
+        flex-direction: column;
+    }
+    .layout{
+        display: block;
+    }
+
+}

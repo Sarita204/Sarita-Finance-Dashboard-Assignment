@@ -1,0 +1,144 @@
+  /* Container */
+  .table-container {
+      padding: 10px;
+      border-radius: 10px;
+      transition: 0.3s;
+  }
+
+  /* Controls */
+  .table-controls {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: end;
+  }
+
+  /* Buttons */
+  .add-btn {
+      padding: 8px 12px;
+      background: #3b82f6;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-bottom: 10px;
+  }
+
+  .export-btn {
+      padding: 6px 10px;
+      background: #10b981;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+  }
+
+  .caterory {
+      padding: 6px;
+      border-radius: 6px;
+  }
+
+  /* Search */
+  .search-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+  }
+
+  .icon {
+      position: absolute;
+      left: 10px;
+      color: #888;
+  }
+
+  .search-wrapper svg {
+      position: absolute;
+      left: 10px;
+      color: #888;
+  }
+
+  .search-input {
+      padding: 6px 10px 6px 30px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+  }
+
+  /* Table */
+  .table-wrapper {
+      overflow-x: auto;
+  }
+
+  .table-container.dark {
+      background: #1e293b !important;
+      color: #e2e8f0;
+  }
+
+  /* FIX FULL TABLE */
+  .table-container.dark .table {
+      background: transparent !important;
+  }
+
+  /* HEADER */
+  .table-container.dark .table thead th {
+      background-color: hsl(229, 84%, 5%) !important;
+      color: #fff;
+  }
+
+  /* BODY FIX */
+  .table-container.dark .table tbody,
+  .table-container.dark .table tr,
+  .table-container.dark .table td {
+      background-color: #1e293b !important;
+      color: #e2e8f0 !important;
+
+  }
+
+  /* BORDER */
+  .table-container.dark .table th,
+  .table-container.dark .table td {
+      border-color: #334155;
+      border: 1px solid rgb(219, 212, 212);
+  }
+
+  /* HOVER */
+  .table-container.dark .table tbody tr:hover td {
+      background-color: #334155 !important;
+  }
+
+  /* Empty state */
+  .no-data {
+      text-align: center;
+      padding: 20px;
+  }
+
+
+  /* ---------------- RESPONSIVE ---------------- */
+
+  @media (max-width: 768px) {
+
+      .caterory {
+          margin-bottom: 15px;
+      }
+
+      .table-header {
+          flex-direction: column;
+          align-items: flex-start;
+      }
+
+      .table-controls {
+          flex-direction: column;
+          width: 100%;
+          align-items: stretch;
+      }
+
+      .search-input,
+      select,
+      .export-btn {
+          width: 100%;
+          border-radius: 6px;
+      }
+
+      .table {
+          font-size: 12px;
+      }
+  }
